@@ -3,6 +3,5 @@ Clone of https://limnia.com/
 
 ReactJs + Vite, Framer Motion, SCSS
 ## Run:
-npm i
-
-npm run dev
+    npm i
+    npm run dev
