@@ -1,0 +1,106 @@
+.wrapper {
+    --text-color: #9b919b;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 60px;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        background-color: var(--my-background);
+        transition: 0.4s 1s;
+    }
+    &.hide {
+        translate: 0 -100%;
+        transition-delay: 0s;
+        &::before {
+            transition-delay: 0.15s;
+        }
+    }
+    &.hideBg {
+        --text-color: #e1e1e2;
+        background-color: transparent;
+        padding-top: 45px;
+        transition-delay: 0.15s;
+        .logo {
+            color: #ccc9c5;
+        }
+        &::before {
+            translate: 0 -100%;
+            opacity: 0;
+            transition-delay: 0.15s;
+        }
+    }
+    .logo {
+        margin: 6px 65px 0px 40px;
+        font: 700 1.35rem '';
+        color: #b0a9a6;
+        cursor: pointer;
+        transition: 0.5s 0.15s;
+    }
+    .pages {
+        display: flex;
+        .link {
+            font-size: 1.05rem;
+            color: var(--text-color);
+            margin: 0px 20px;
+            position: relative;
+            transition: 0.5s 0.15s;
+        }
+    }
+    .actions {
+        margin-right: 40px;
+        button {
+            padding: 0;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--text-color);
+            background-color: inherit;
+            cursor: pointer;
+            transition: 0.4s;
+            & + button {
+                margin-left: 25px;
+            }
+            &.search {
+                width: 40px;
+                height: 40px;
+                .icon {
+                    font-size: 0.9rem;
+                    transition: 0.4s;
+                }
+                &:hover .icon {
+                    rotate: -15deg;
+                    transform-origin: 50% 35%;
+                    font-size: 0.98rem;
+                }
+            }
+        }
+    }
+    .underline {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            bottom: -3px;
+            height: 2px;
+            right: 0;
+            background-color: currentColor;
+            transition: width 0.5s;
+        }
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
