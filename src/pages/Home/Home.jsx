@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
-import Footer from '../../Layout/Footer/Footer';
+import Footer from '../../layout/Footer/Footer';
 import Parallax from '../../animation/Parallax';
 import { ScrollContext } from '../../animation/ScrollProvider';
 import videos from '../../assets/videos';
